@@ -4,5 +4,11 @@
 .env.production.local
 .env.local
 
+.gemini
+
+vagrant-ssh-config
+Vagrantfile
+.vagrant
+
 .idea
 **/.DS_Store

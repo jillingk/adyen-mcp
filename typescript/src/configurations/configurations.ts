@@ -5,6 +5,7 @@ export enum AdyenOptionKeys {
   ApiKey = "adyenApiKey",
   Environment = "env",
   LivePrefix = "livePrefix",
+  GenerateFromOpenApi = "generateFromOpenApi", // Experimental
 }
 
 export enum Environment {
@@ -29,6 +30,8 @@ const optionsConfig: ParseArgsConfig["options"] = {
   [AdyenOptionKeys.LivePrefix]: {
     type: "string" as const,
   },
+    // TODO create proper user input
+  [AdyenOptionKeys.GenerateFromOpenApi]: {type: "string" as const,},
 };
 
 function validateAdyenConfig(options: { [option: string]: any }) {

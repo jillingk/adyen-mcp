@@ -57,6 +57,25 @@ Example usage in `.vscode`:
 }
 ```
 
+Example usage with Gemini cli, open ~/.gemini/settings.json and add the following:
+```json
+{
+  "mcpServers": {
+    "adyen-mcp-servers": {
+      "command": "npx",
+      "args": [
+        "--yes",
+        "@adyen/mcp",
+        "--env=TEST",
+        "--adyenApiKey=ADYEN_API_KEY"
+      ],
+      "transport": "stdio",
+      "trust": true
+    }
+  }
+}
+```
+
 **Note:** To run certain functionality (tools) in the mcp-server, you need a webservice user with the following roles: 
 * Management API - Accounts Read
 * Management API - Payment methods Read
